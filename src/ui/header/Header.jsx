@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import HeaderShow from "./HeaderShow";
+import styles from "./Header.module.css";
 
-function Header({ show }) {
+function Header({ show, fixed }) {
   return (
-    <header>
+    <header className={`${styles.header} ${fixed ? styles.header_fixed : ""} `}>
       <Link to="/">
         <img src="/logo/logo.svg" alt="run pizza logo" />
       </Link>

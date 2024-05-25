@@ -1,12 +1,19 @@
-import HeaderShow from "../../ui/header/HeaderShow";
+import Header from "../../ui/header/Header";
+import styles from "./Cart.module.css";
 
 function EmptyCart() {
   return (
-    <div>
-      <HeaderShow show="menu" />
+    <section className="page_layout">
+      <Header show="menu" />
 
-      <p>Your cart is still empty. Start adding some pizzas :)</p>
-    </div>
+      <div className="page_background">
+        <div className="cart">
+          <p className={styles.title_empty}>
+            Your cart is still empty. Start adding some pizzas :)
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 

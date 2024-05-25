@@ -1,31 +1,56 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getCart, clearCart } from "./cartSlice";
-import HeaderShow from "../../ui/header/HeaderShow";
-import Button from "../../ui/Button";
+import { getCart, clearCart, getTotalCartPrice } from "./slice/cartSlice";
+import { formatCurrency } from "../../utils/helpers";
+import Header from "../../ui/header/Header";
+import Button from "../../ui/button/Button";
 import EmptyCart from "./EmptyCart";
 import CartItem from "./CartItem";
+import styles from "./Cart.module.css";
 
 function Cart() {
+  // Cart
   const cart = useSelector(getCart);
+  // Total price
+  const totalCartPrice = useSelector(getTotalCartPrice);
+  // Dispatch access
   const dispatch = useDispatch();
-
+  // No cart => EmptyCart
   if (!cart.length) return <EmptyCart />;
 
   return (
-    <div>
-      <HeaderShow show="menu" />
+    <section className="page_layout">
+      <Header show="menu" fixed={true} />
 
-      <ul>
-        {cart.map((item) => (
-          <CartItem item={item} key={item.pizzaId} />
-        ))}
-      </ul>
+      <div className="page_background">
+        <div className="cart">
+          <h3 className={styles.title}>Order</h3>
 
-      <div>
-        <Button to="/order/new">Order pizzas</Button>
-        <Button onClick={() => dispatch(clearCart())}>Clear cart</Button>
+          <ul>
+            {cart.map((item) => (
+              <CartItem item={item} key={item.pizzaId} />
+            ))}
+          </ul>
+
+          <p className={styles.price_total}>
+            Price total: {formatCurrency(totalCartPrice)}
+          </p>
+
+          <div className={styles.button__box}>
+            <Button
+              onClick={() => dispatch(clearCart())}
+              baseType="base"
+              extraType="clear"
+            >
+              Clear cart
+            </Button>
+
+            <Button to="/order/new" baseType="base" extraType="order_cart">
+              Order now
+            </Button>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

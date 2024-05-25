@@ -1,0 +1,75 @@
+.title {
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 4.2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+}
+
+.form__box {
+  display: flex;
+  gap: 3.2rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Manrope", sans-serif;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-grey--3);
+  padding: 0 0.4rem;
+}
+
+input::placeholder {
+  color: var(--color-grey--4);
+}
+
+.input_street {
+  width: 75%;
+}
+
+.input_house {
+  width: 25%;
+}
+
+/* <900px */
+@media (max-width: 56.25em) {
+  .title {
+    font-size: 3.4rem;
+    margin-bottom: 3.8rem;
+  }
+  form {
+    gap: 3.8rem;
+  }
+  .form__box {
+    gap: 3.2rem;
+  }
+  input {
+    font-size: 1.6rem;
+  }
+}
+
+/* <600px */
+@media (max-width: 37.5em) {
+  .title {
+    font-size: 3.2rem;
+  }
+  form {
+    gap: 3.4rem;
+  }
+  .input_street {
+    width: 65%;
+  }
+  .input_house {
+    width: 35%;
+  }
+}

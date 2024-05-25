@@ -1,8 +1,10 @@
 import { Outlet, useNavigation } from "react-router-dom";
-import Loader from "./Loader";
+import Loader from "../loader/Loader";
 
 function AppLayout() {
+  // Page navigation state
   const navigation = useNavigation();
+  // Loading state
   const isLoading = navigation.state === "loading";
 
   return (

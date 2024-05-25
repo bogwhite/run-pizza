@@ -1,0 +1,75 @@
+.title {
+  align-content: center;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 7.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 3.2rem;
+}
+
+.title h1 span {
+  background: radial-gradient(
+    at right bottom,
+    var(--color-primary) 15%,
+    var(--color-tomato--3) 65%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.title p {
+  font-size: 2rem;
+  color: var(--color-grey--2);
+  margin-bottom: 8rem;
+}
+
+.title_cta {
+  text-align: center;
+}
+
+.content {
+  align-content: center;
+}
+
+.content img {
+  width: 100%;
+}
+
+/* <1200px */
+@media (max-width: 75em) {
+  .title h1 {
+    font-size: 7rem;
+    margin-bottom: 2.8rem;
+  }
+  .title p {
+    margin-bottom: 6rem;
+  }
+  .content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* <900px */
+@media (max-width: 56.25em) {
+  .title h1 {
+    font-size: 6rem;
+  }
+  .title p {
+    font-size: 1.8rem;
+    margin-bottom: 4.8rem;
+  }
+  .content {
+    width: 75%;
+  }
+}
+
+/* <600px */
+@media (max-width: 37.5em) {
+  .content {
+    display: none;
+  }
+}

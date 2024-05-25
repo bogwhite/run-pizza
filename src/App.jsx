@@ -1,10 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import Error from "./ui/Error";
-import Home from "./ui/Home";
+import AppLayout from "./ui/appLayout/AppLayout";
+import Error from "./ui/error/Error";
+import Home from "./ui/home/Home";
 import Menu, { menuLoader } from "./features/menu/Menu";
 import Cart from "./features/cart/Cart";
-import CreateOrder, { formOrder } from "./features/order/CreateOrder";
+import CreateOrder, { formOrder } from "./features/order/form/CreateOrder";
 import Order, { orderLoader } from "./features/order/Order";
 
 const router = createBrowserRouter([

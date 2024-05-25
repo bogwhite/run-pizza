@@ -1,0 +1,35 @@
+.title_heading {
+  font-size: 2.8rem;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+
+.title_paragraph {
+  font-size: 2.2rem;
+  margin-bottom: 3.2rem;
+}
+
+/* <900px */
+@media (max-width: 56.25em) {
+  .title_heading {
+    font-size: 2.6rem;
+    margin-top: 2.8rem;
+    margin-bottom: 2.8rem;
+  }
+
+  .title_paragraph {
+    font-size: 2.2rem;
+    margin-bottom: 2.8rem;
+  }
+}
+
+/* <600px */
+@media (max-width: 37.5em) {
+  .title_heading {
+    font-size: 2.4rem;
+  }
+
+  .title_paragraph {
+    font-size: 2rem;
+  }
+}
