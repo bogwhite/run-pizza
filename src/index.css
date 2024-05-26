@@ -133,6 +133,8 @@ body {
 /* <600px */
 @media (max-width: 37.5em) {
   .home {
+    height: 100%;
+    display: flex;
     padding: 4.8rem 3.2rem;
   }
   .menu {
