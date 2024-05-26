@@ -148,7 +148,7 @@
 /* <600px */
 @media (max-width: 37.5em) {
   .order__box {
-    width: 35.5rem;
+    width: 32.5rem;
     padding: 3.2rem;
   }
   .status__box {
