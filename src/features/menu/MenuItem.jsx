@@ -52,6 +52,7 @@ function MenuItem({ pizza }) {
               <UpdateItemQuantity
                 pizzaId={id}
                 currentQuantity={currentQuantity}
+                menuType="menu_quantity"
               />
               <DeleteItem pizzaId={id} />
             </div>
@@ -62,9 +63,7 @@ function MenuItem({ pizza }) {
               onClick={handleAddtoCart}
               baseType="base"
               extraType="order_menu"
-            >
-              Add to cart
-            </Button>
+            />
           )}
         </div>
       </div>

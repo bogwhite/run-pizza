@@ -159,10 +159,10 @@
   }
   .item_title {
     font-size: 2.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
   .item_ingredients {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 1.6rem;
   }
   .cart_price,

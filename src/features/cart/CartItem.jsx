@@ -23,7 +23,7 @@ function CartItem({ item }) {
               pizzaId={pizzaId}
               currentQuantity={currentQuantity}
             />
-            <DeleteItem pizzaId={pizzaId} />
+            <DeleteItem pizzaId={pizzaId} cartType={true} />
           </div>
         </div>
       </div>

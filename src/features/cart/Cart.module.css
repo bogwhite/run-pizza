@@ -96,14 +96,10 @@
     height: 10rem;
   }
   .item__box {
-    gap: 1.2rem;
+    gap: 1.6rem;
   }
   .item_name,
   .price_total {
     font-size: 2.2rem;
-  }
-  .cart__box,
-  .cta__box {
-    gap: 2.2rem;
   }
 }

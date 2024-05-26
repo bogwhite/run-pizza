@@ -19,6 +19,10 @@
   padding: 1.2rem 1.6rem;
 }
 
+.order_menu:before {
+  content: "Add to cart";
+}
+
 .order_cart,
 .order_form {
   color: var(--color-light--1);
@@ -95,8 +99,14 @@
     font-size: 1.4rem;
     padding: 0.8rem 1.2rem;
   }
+  .order_menu:before {
+    content: "Add";
+  }
   .order_cart,
   .order_form {
     font-size: 1.4rem;
+  }
+  .cart_delete {
+    display: none;
   }
 }

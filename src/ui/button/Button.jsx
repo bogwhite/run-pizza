@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import styles from "./Button.module.css";
 
-function Button({ children, to, onClick, disabled, baseType, extraType }) {
+function Button({
+  children,
+  to,
+  onClick,
+  disabled,
+  baseType,
+  extraType,
+  cartType,
+}) {
   // To button
   if (to)
     return (
@@ -14,7 +22,7 @@ function Button({ children, to, onClick, disabled, baseType, extraType }) {
     return (
       <button
         onClick={onClick}
-        className={`${styles[baseType]} ${styles[extraType]}`}
+        className={`${styles[baseType]} ${styles[extraType]} ${styles[cartType]}`}
       >
         {children}
       </button>
