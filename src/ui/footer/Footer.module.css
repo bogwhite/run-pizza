@@ -56,7 +56,11 @@
 /* <600px */
 @media (max-width: 37.5em) {
   .footer {
+    height: 6.4rem;
     padding: 1.2rem 3.2rem;
+  }
+  .logo img {
+    height: 3.6rem;
   }
   .social_media {
     gap: 1.2rem;
